@@ -748,12 +748,25 @@ function ageString(sec) {
   return `${Math.floor(sec/3600)}小時前`;
 }
 
+let lastRenderedAt = null;
+
+function touchAge(s) {
+  const stat = s.status || {};
+  if (!stat.last_tick) return;
+  const age = Math.max(0, Math.round((Date.now() - new Date(s.updated_at_iso).getTime()) / 1000));
+  document.getElementById('last-tick').textContent = `${stat.last_tick} (${ageString(age)})`;
+}
+
 async function refresh() {
   try {
     const url = STATE_URL + '?t=' + Date.now();
     const r = await fetch(url, { cache: 'no-store' });
     if (!r.ok) throw new Error(r.statusText);
     const s = await r.json();
+    // 資料 60 秒才變一次，但這裡 5 秒抓一次。內容沒變就不要重畫——
+    // 重畫會讓交易表格閃動、翻頁被重置，看起來像網頁一直在刷新。
+    if (s.updated_at === lastRenderedAt) { touchAge(s); return; }
+    lastRenderedAt = s.updated_at;
     render(s);
   } catch (e) {
     document.getElementById('status-text').textContent = 'state.json load failed';
@@ -1087,7 +1100,7 @@ const TRADES_PER_PAGE = 20;
 function renderTradeLog(tl) {
   const summary = tl.summary;
   allTrades = (tl.trades || []).slice();
-  applyAcctFilter();
+  applyAcctFilter(false);
   const sm = summaryOf(tradeLogData);
   if (sm) {
     document.getElementById('ts-total').textContent = sm.total;
@@ -1121,10 +1134,10 @@ function summaryOf(ts) {
   };
 }
 
-function applyAcctFilter() {
+function applyAcctFilter(resetPage) {
   const f = acctFilter === 'all' ? allTrades : allTrades.filter(t => t.account === acctFilter);
   tradeLogData = f.slice().reverse();     // 最新在上
-  tradePage = 1;
+  if (resetPage) tradePage = 1;           // 只有換帳號才回第一頁
 }
 
 document.querySelectorAll('#acct-bar .iv-btn').forEach(b => {
@@ -1132,7 +1145,7 @@ document.querySelectorAll('#acct-bar .iv-btn').forEach(b => {
     document.querySelectorAll('#acct-bar .iv-btn').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     acctFilter = b.dataset.acct;
-    applyAcctFilter();
+    applyAcctFilter(true);
     const sm = summaryOf(tradeLogData);
     if (sm) {
       document.getElementById('ts-total').textContent = sm.total;
@@ -1148,6 +1161,8 @@ document.querySelectorAll('#acct-bar .iv-btn').forEach(b => {
 
 function renderTradePage() {
   const body = document.getElementById('trade-table-body');
+  const wrap = document.querySelector('.trade-table-wrap');
+  const keepScroll = wrap ? wrap.scrollTop : 0;
   if (tradeLogData.length === 0) {
     body.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--ink-dim);">尚無交易紀錄</td></tr>';
     document.getElementById('trade-pagination').innerHTML = '';
@@ -1191,6 +1206,7 @@ function renderTradePage() {
   pg.innerHTML = btns.join('');
   pg.querySelectorAll('button[data-page]').forEach(b =>
     b.addEventListener('click', () => { tradePage = parseInt(b.dataset.page); renderTradePage(); }));
+  if (wrap) wrap.scrollTop = keepScroll;
 }
 
 /* ============================================================
