@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 00:04:58",
- "updated_at_iso": "2026-08-06T00:04:58.747339+08:00",
+ "updated_at": "2026-08-06 00:06:02",
+ "updated_at_iso": "2026-08-06T00:06:02.889546+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 440.75793271,
+   "equity": 438.69839271,
    "available": 362.71614346295,
-   "unrealized": 9.48077,
+   "unrealized": 7.42123,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -62,7 +62,7 @@
  },
  "live": {
   "ok": true,
-  "equity": 753.98664005,
+  "equity": 751.92710005,
   "available": 675.94485080738,
   "position": null,
   "positions": [
@@ -3139,6 +3139,12 @@
    "equity": 753.98664005,
    "main": 440.75793271,
    "sub": 313.22870734
+  },
+  {
+   "ts": "2026-08-06T00:06:02.889546+08:00",
+   "equity": 751.92710005,
+   "main": 438.69839271,
+   "sub": 313.22870734
   }
  ],
  "equity_daily": [
@@ -3148,7 +3154,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 753.98664005
+   "equity": 751.92710005
   }
  ],
  "equity_per_trade": [
@@ -3202,7 +3208,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 00:04:58",
+  "last_tick": "2026-08-06 00:06:02",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -3270,7 +3276,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 00:04:58",
+  "last_tick": "2026-08-06 00:06:02",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-05T20:19:04+08:00"
  }
