@@ -1,0 +1,25 @@
+# 金鑰——這個 repo 是公開的，任何金鑰檔案都不能出現
+.env
+.env.*
+*.key
+*.pem
+*secret*
+*credential*
+
+# OS / 編輯器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# 暫存
+state.json.tmp
+*.bak
+*.log
+
+# 假資料只給本機預覽，不發佈
+state.demo.json
