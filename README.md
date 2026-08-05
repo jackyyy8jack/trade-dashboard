@@ -10,19 +10,6 @@ MEXC 永續合約的手動交易紀錄，主帳號 + 子帳號合併顯示。
 
 手機、平板、任何裝置的瀏覽器直接開就好。
 
-### ⚠️ 第一次要先啟用，不然是 404
-
-1. 到這個 repo 的 **Settings**（上方齒輪）
-2. 左側選單往下找 **Pages**
-3. **Source** 選 `Deploy from a branch`
-4. **Branch** 選 `main`，右邊資料夾選 `/ (root)`
-5. 按 **Save**
-
-按完等 1～2 分鐘，重新整理 Settings → Pages，
-上方出現綠色的 `Your site is live at ...` 就成功了。
-
-**這個設定只要做一次**，往後每次 push 都自動更新，不用再碰。
-
 ### 加到手機主畫面（像 App 一樣）
 
 - **iPhone**：Safari 開啟 → 分享鈕 → 加入主畫面
