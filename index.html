@@ -496,13 +496,6 @@
     z-index: 1;
   }
 
-  /* Bot state machine pill colors */
-  .bot-state-NO_ORDER      { color: var(--ink-dim); }
-  .bot-state-PENDING_ORDER { color: var(--pin-yellow); }
-  .bot-state-IN_POSITION   { color: var(--pin-green); }
-  .bot-state-EXIT_PENDING  { color: var(--pin-blue); }
-  .bot-state-RECONCILING   { color: var(--pin-red); }
-  .bot-state-UNKNOWN       { color: var(--ink-dim); }
 </style>
 </head>
 <body>
@@ -815,12 +808,38 @@ function render(s) {
     posEl.innerHTML = `
       <span class="position-pill ${cls}">${dir.toUpperCase()}</span> ${pos.size || pos.qty || '—'} SOL @ $${pos.entry || pos.avg_price || '—'}
       <div class="row"><span class="k">Unreal. PnL</span><span class="v ${pnlClass(pos.unrealized_pnl || pos.PnL || pos.pnl || 0)}">${fmtMoney(pos.unrealized_pnl || pos.PnL || pos.pnl || 0)}</span></div>`;
-  } else { posEl.innerHTML = nPos ? `<span class="pnl-neutral">${nPos} 個持倉（見右）</span>` : '<span class="pnl-neutral">無持倉</span>'; }
+  } else if (nPos) {
+    const u = Number(live.unrealized || 0);
+    posEl.innerHTML = `<div class="row"><span class="k">${nPos} 個持倉，浮動盈虧</span>`
+      + `<span class="v ${pnlClass(u)}" style="font-weight:700">${u >= 0 ? '+' : ''}$${u.toFixed(4)}</span></div>`;
+  } else { posEl.innerHTML = '<span class="pnl-neutral">無持倉</span>'; }
 
   const pendEl = document.getElementById('pending-content');
   const openPos = live.positions || [];
   pendEl.innerHTML = openPos.length
-    ? openPos.map(p => `<div class="row"><span class="k">${p.symbol} <span class="position-pill ${p.direction}">${p.direction.toUpperCase()}</span></span><span class="v">${p.vol} @ $${Number(p.entry).toFixed(4)}</span></div>`).join('')
+    ? openPos.map(p => {
+        const u = Number(p.unrealized || 0), roi = Number(p.roi_pct || 0);
+        const cls = pnlClass(u);
+        const sign = u >= 0 ? '+' : '';
+        return `<div style="margin-bottom:0.8cqi;padding-bottom:0.6cqi;border-bottom:1px dashed var(--paper-edge);">
+          <div class="row">
+            <span class="k">${(p.symbol||'').replace('_USDT','')}
+              <span class="position-pill ${p.direction}">${(p.direction||'').toUpperCase()}</span>
+              <span style="color:var(--ink-dim);font-size:0.85em">${Number(p.leverage||0)}x</span></span>
+            <span class="v ${cls}" style="font-weight:700">${sign}$${u.toFixed(4)}</span>
+          </div>
+          <div class="row"><span class="k">進場 → 現價</span>
+            <span class="v">${Number(p.entry).toFixed(4)} → ${Number(p.mark||0).toFixed(4)}</span></div>
+          <div class="row"><span class="k">數量 / 保證金</span>
+            <span class="v">${Number(p.vol).toFixed(4)} / $${Number(p.margin||0).toFixed(2)}</span></div>
+          <div class="row"><span class="k">ROI</span>
+            <span class="v ${cls}">${roi >= 0 ? '+' : ''}${roi.toFixed(2)}%</span></div>
+          <div class="row"><span class="k">強平價</span>
+            <span class="v" style="color:var(--red)">${Number(p.liq||0).toFixed(2)}</span></div>
+          <div class="row"><span class="k">帳號</span>
+            <span class="v">${p.account_label || ''}</span></div>
+        </div>`;
+      }).join('')
     : '<span class="pnl-neutral">無持倉</span>';
 
   // Accounts
@@ -836,7 +855,9 @@ function render(s) {
     else {
       eqEl.textContent = '$' + Number(a.equity).toFixed(2);
       eqEl.className = 'val';
-      sbEl.textContent = `可用 $${Number(a.available).toFixed(2)} · ${a.trades||0} 筆`;
+      const up = Number(a.unrealized_positions || 0);
+      sbEl.innerHTML = `可用 $${Number(a.available).toFixed(2)} · ${a.trades||0} 筆`
+        + (up ? ` · <span class="${pnlClass(up)}">浮動 ${up >= 0 ? '+' : ''}${up.toFixed(2)}</span>` : '');
     }
   }
   document.getElementById('live-max-dd').textContent = (ls.max_dd_pct || 0).toFixed(2) + '%';
@@ -1216,33 +1237,41 @@ const bartenderQuotes = [
   "歡迎來到 Driftwood Tavern，旅人。坐下喝一杯吧。",
   "今晚特調 — Old Fashioned，$8。",
   "你看起來像剛被市場狠狠教訓過... 來杯威士忌？",
-  "Soup of the Day: WHISKEY. 我推這個。",
-  "PF 1.5 不錯，但你的 Max Drawdown 是多少？",
-  "100x 槓桿... 你是來賭命的還是來交易的？",
+  "Soup of the Day: WHISKEY。我推這個。",
+  "手動下單的人最誠實 — 每一筆都是自己按的，賴不掉。",
+  "有記錄的交易叫經驗，沒記錄的只叫回憶。",
+  "勝率三成也能賺，前提是你賠的時候夠小聲。",
   "Cut losses fast, let profits run. — 我祖父說的。",
-  "心情不好就喝一杯。但別把 Stop Loss 也喝掉了。",
+  "心情不好就喝一杯。但別把停損也喝掉了。",
   "別交易了，喝酒就好。",
-  "你的 bot 真的有 edge 嗎？我有點懷疑。",
+  "浮盈不是你的錢，平倉了才是。",
   "Tips make me do a happy dance.",
-  "看你的 PnL... 我不予置評。",
+  "看你的損益... 我不予置評。",
   "市場像酒，淺嘗即可，喝太多會吐。",
   "我以前也是交易員，後來開了這間酒吧。",
-  "聽說 MSS 在 5m 上 PF 才 1.6，你還敢用 100 倍？",
+  "100 倍槓桿... 你是來賭命的還是來交易的？",
   "Wi-Fi password: driftwood87",
   "We don't work during drinking hours.",
   "Be kind, tip well, come back soon.",
   "Good Times. Great People. 我們的座右銘。",
-  "強平率 8%？那不是策略，是慢動作自殺。",
+  "連續虧五筆之後最想做的事，通常就是最不該做的事。",
   "我看過太多人凌晨四點還在盯圖。別熬夜。",
   "酒保的智慧：永遠別 all in。",
   "BEER is proof that GOD loves us, and wants us to be happy.",
   "Please don't feed the bartender. 但 tip 我歡迎。",
   "我不收 SOL，只收美金跟笑容。",
-  "你今天虧了多少？... 不，別告訴我。我猜。",
-  "回測 100 倍報酬，實盤 -30% — 你應該很熟悉吧？",
-  "聽我的，先去睡覺，bot 它自己會跑。",
+  "你今天賺了多少？... 不，別告訴我。我猜。",
+  "帳戶回撤 30% 需要漲 43% 才回本。數學不會陪你講情面。",
+  "聽我的，先去睡覺，單子它自己會走。",
   "Bar Rules: 1. Be nice. 2. Get drinks. 3. Have fun.",
-  "你還在這？回家陪老婆／男朋友啦。",
+  "你還在這？回家陪家人啦。",
+  "翻倍的方法有很多種，能重複的只有一種。",
+  "手癢的時候，先來一杯，通常就不癢了。",
+  "會記錄的人不一定會賺，但會賺的人一定有記錄。",
+  "最貴的一句話是「這次不一樣」。",
+  "小倉位睡得著，大倉位睡不著。你選。",
+  "行情不會跑掉，本金會。",
+  "今天沒單也是一種決定，而且常常是對的那個。",
 ];
 
 const dialog = document.getElementById('dialog');
