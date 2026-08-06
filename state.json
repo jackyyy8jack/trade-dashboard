@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 07:59:17",
- "updated_at_iso": "2026-08-06T07:59:17.386848+08:00",
+ "updated_at": "2026-08-06 08:00:21",
+ "updated_at_iso": "2026-08-06T08:00:21.201218+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 433.49320271,
-   "available": 362.71614346295,
-   "unrealized": 2.21604,
+   "equity": 433.13329058,
+   "available": 362.84764133595,
+   "unrealized": 1.72463,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -18,10 +18,10 @@
      "direction": "short",
      "vol": 313.0,
      "entry": 64700.9,
-     "liq": 76517.4,
+     "liq": 76521.6,
      "margin": 10.12569085,
      "leverage": 200.0,
-     "funding_paid": 0.0543
+     "funding_paid": 0.1858
     }
    ],
    "trades": 9,
@@ -62,8 +62,8 @@
  },
  "live": {
   "ok": true,
-  "equity": 746.72191005,
-  "available": 675.94485080738,
+  "equity": 746.36199792,
+  "available": 676.0763486803801,
   "position": null,
   "positions": [
    {
@@ -71,10 +71,10 @@
     "direction": "short",
     "vol": 313.0,
     "entry": 64700.9,
-    "liq": 76517.4,
+    "liq": 76521.6,
     "margin": 10.12569085,
     "leverage": 200.0,
-    "funding_paid": 0.0543
+    "funding_paid": 0.1858
    }
   ],
   "plan_orders": [],
@@ -5803,6 +5803,12 @@
    "equity": 746.72191005,
    "main": 433.49320271,
    "sub": 313.22870734
+  },
+  {
+   "ts": "2026-08-06T08:00:21.201218+08:00",
+   "equity": 746.36199792,
+   "main": 433.13329058,
+   "sub": 313.22870734
   }
  ],
  "equity_daily": [
@@ -5812,7 +5818,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 746.72191005
+   "equity": 746.36199792
   }
  ],
  "equity_per_trade": [
@@ -5866,7 +5872,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 07:59:17",
+  "last_tick": "2026-08-06 08:00:21",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -5934,7 +5940,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 07:59:17",
+  "last_tick": "2026-08-06 08:00:21",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-05T20:19:04+08:00"
  }
