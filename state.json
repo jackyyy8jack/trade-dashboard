@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 13:05:05",
- "updated_at_iso": "2026-08-06T13:05:05.781971+08:00",
+ "updated_at": "2026-08-06 13:06:10",
+ "updated_at_iso": "2026-08-06T13:06:10.054142+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 430.09406058,
+   "equity": 427.33653058,
    "available": 421.28296973595,
-   "unrealized": -1.3146,
+   "unrealized": -4.07213,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -19,19 +19,19 @@
      "vol": 0.0313,
      "contracts": 313.0,
      "entry": 64700.9,
-     "mark": 64743.0,
-     "unrealized": -1.31773,
+     "mark": 64831.0,
+     "unrealized": -4.07213,
      "roi_pct": 1.83,
      "liq": 78387.8,
      "margin": 10.12569085,
-     "margin_ratio": 0.65,
+     "margin_ratio": 0.66,
      "leverage": 200.0,
      "funding_paid": 0.1858,
      "margin_mode": "cross",
      "open_time_ms": 1785942650432
     }
    ],
-   "unrealized_positions": -1.31773,
+   "unrealized_positions": -4.07213,
    "trades": 9,
    "new_this_run": 0,
    "summary": {
@@ -49,12 +49,30 @@
    "label": "子帳號",
    "ok": true,
    "configured": true,
-   "equity": 297.66670734,
+   "equity": 298.85092734,
    "available": 267.90578994443,
-   "unrealized": 0.0,
-   "position_margin": 0.0,
-   "positions": [],
-   "unrealized_positions": 0,
+   "unrealized": 1.18422,
+   "position_margin": 29.7609174,
+   "positions": [
+    {
+     "symbol": "BTC_USDT",
+     "direction": "short",
+     "vol": 0.0918,
+     "contracts": 918.0,
+     "entry": 64838.6,
+     "mark": 64825.7,
+     "unrealized": 1.18422,
+     "roi_pct": 0.0,
+     "liq": 67989.1,
+     "margin": 29.7609174,
+     "margin_ratio": 2.78,
+     "leverage": 200.0,
+     "funding_paid": 0.0,
+     "margin_mode": "cross",
+     "open_time_ms": 1785992735737
+    }
+   ],
+   "unrealized_positions": 1.18422,
    "trades": 4,
    "new_this_run": 0,
    "summary": {
@@ -71,7 +89,7 @@
  },
  "live": {
   "ok": true,
-  "equity": 727.76076792,
+  "equity": 726.18745792,
   "available": 689.18875968038,
   "position": null,
   "positions": [
@@ -81,26 +99,45 @@
     "vol": 0.0313,
     "contracts": 313.0,
     "entry": 64700.9,
-    "mark": 64743.0,
-    "unrealized": -1.31773,
+    "mark": 64831.0,
+    "unrealized": -4.07213,
     "roi_pct": 1.83,
     "liq": 78387.8,
     "margin": 10.12569085,
-    "margin_ratio": 0.65,
+    "margin_ratio": 0.66,
     "leverage": 200.0,
     "funding_paid": 0.1858,
     "margin_mode": "cross",
     "open_time_ms": 1785942650432,
     "account": "main",
     "account_label": "主帳號"
+   },
+   {
+    "symbol": "BTC_USDT",
+    "direction": "short",
+    "vol": 0.0918,
+    "contracts": 918.0,
+    "entry": 64838.6,
+    "mark": 64825.7,
+    "unrealized": 1.18422,
+    "roi_pct": 0.0,
+    "liq": 67989.1,
+    "margin": 29.7609174,
+    "margin_ratio": 2.78,
+    "leverage": 200.0,
+    "funding_paid": 0.0,
+    "margin_mode": "cross",
+    "open_time_ms": 1785992735737,
+    "account": "sub",
+    "account_label": "子帳號"
    }
   ],
-  "unrealized": -1.31773,
+  "unrealized": -2.8879099999999998,
   "plan_orders": [],
   "stop_orders": []
  },
  "live_stats": {
-  "max_dd_pct": 5.687025879517525
+  "max_dd_pct": 5.890916432367177
  },
  "trade_log": {
   "summary": {
@@ -7550,6 +7587,12 @@
    "equity": 727.76076792,
    "main": 430.09406058,
    "sub": 297.66670734
+  },
+  {
+   "ts": "2026-08-06T13:06:10.054142+08:00",
+   "equity": 726.18745792,
+   "main": 427.33653058,
+   "sub": 298.85092734
   }
  ],
  "equity_daily": [
@@ -7559,7 +7602,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 727.76076792
+   "equity": 726.18745792
   }
  ],
  "equity_per_trade": [
@@ -7617,7 +7660,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 13:05:05",
+  "last_tick": "2026-08-06 13:06:10",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -7690,7 +7733,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 13:05:05",
+  "last_tick": "2026-08-06 13:06:10",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-06T12:31:53+08:00"
  }
