@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 12:46:56",
- "updated_at_iso": "2026-08-06T12:46:56.902328+08:00",
+ "updated_at": "2026-08-06 12:48:00",
+ "updated_at_iso": "2026-08-06T12:48:00.779477+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 434.24444058,
+   "equity": 433.96900058,
    "available": 421.28296973595,
-   "unrealized": 2.83578,
+   "unrealized": 2.56034,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -19,8 +19,8 @@
      "vol": 0.0313,
      "contracts": 313.0,
      "entry": 64700.9,
-     "mark": 64610.3,
-     "unrealized": 2.83578,
+     "mark": 64619.1,
+     "unrealized": 2.56034,
      "roi_pct": 1.83,
      "liq": 78387.8,
      "margin": 10.12569085,
@@ -31,7 +31,7 @@
      "open_time_ms": 1785942650432
     }
    ],
-   "unrealized_positions": 2.83578,
+   "unrealized_positions": 2.56034,
    "trades": 9,
    "new_this_run": 0,
    "summary": {
@@ -71,7 +71,7 @@
  },
  "live": {
   "ok": true,
-  "equity": 731.9111479200001,
+  "equity": 731.63570792,
   "available": 689.18875968038,
   "position": null,
   "positions": [
@@ -81,8 +81,8 @@
     "vol": 0.0313,
     "contracts": 313.0,
     "entry": 64700.9,
-    "mark": 64610.3,
-    "unrealized": 2.83578,
+    "mark": 64619.1,
+    "unrealized": 2.56034,
     "roi_pct": 1.83,
     "liq": 78387.8,
     "margin": 10.12569085,
@@ -95,7 +95,7 @@
     "account_label": "主帳號"
    }
   ],
-  "unrealized": 2.83578,
+  "unrealized": 2.56034,
   "plan_orders": [],
   "stop_orders": []
  },
@@ -7448,6 +7448,12 @@
    "equity": 731.91114792,
    "main": 434.24444058,
    "sub": 297.66670734
+  },
+  {
+   "ts": "2026-08-06T12:48:00.779477+08:00",
+   "equity": 731.63570792,
+   "main": 433.96900058,
+   "sub": 297.66670734
   }
  ],
  "equity_daily": [
@@ -7457,7 +7463,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 731.91114792
+   "equity": 731.63570792
   }
  ],
  "equity_per_trade": [
@@ -7515,7 +7521,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 12:46:56",
+  "last_tick": "2026-08-06 12:48:00",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -7588,7 +7594,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 12:46:56",
+  "last_tick": "2026-08-06 12:48:00",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-06T12:31:53+08:00"
  }
