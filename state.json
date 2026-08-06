@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 21:03:57",
- "updated_at_iso": "2026-08-06T21:03:57.457876+08:00",
+ "updated_at": "2026-08-06 21:05:01",
+ "updated_at_iso": "2026-08-06T21:05:01.749930+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 441.59632611,
+   "equity": 442.43516611,
    "available": 421.33569526829,
-   "unrealized": 10.13494,
+   "unrealized": 10.97378,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -19,19 +19,19 @@
      "vol": 0.0313,
      "contracts": 313.0,
      "entry": 64700.9,
-     "mark": 64377.1,
-     "unrealized": 10.13494,
+     "mark": 64350.3,
+     "unrealized": 10.97378,
      "roi_pct": 2.35,
      "liq": 78389.5,
      "margin": 10.12569085,
-     "margin_ratio": 0.64,
+     "margin_ratio": 0.63,
      "leverage": 200.0,
      "funding_paid": 0.2386,
      "margin_mode": "cross",
      "open_time_ms": 1785942650432
     }
    ],
-   "unrealized_positions": 10.13494,
+   "unrealized_positions": 10.97378,
    "trades": 9,
    "new_this_run": 0,
    "summary": {
@@ -49,9 +49,9 @@
    "label": "子帳號",
    "ok": true,
    "configured": true,
-   "equity": 340.18704644,
+   "equity": 342.64728644,
    "available": 268.06042904567,
-   "unrealized": 42.3657,
+   "unrealized": 44.82594,
    "position_margin": 29.7609174,
    "positions": [
     {
@@ -60,19 +60,19 @@
      "vol": 0.0918,
      "contracts": 918.0,
      "entry": 64838.6,
-     "mark": 64377.1,
-     "unrealized": 42.3657,
+     "mark": 64350.299999999996,
+     "unrealized": 44.82594,
      "roi_pct": 0.51,
      "liq": 67990.8,
      "margin": 29.7609174,
-     "margin_ratio": 2.44,
+     "margin_ratio": 2.42,
      "leverage": 200.0,
      "funding_paid": 0.1546,
      "margin_mode": "cross",
      "open_time_ms": 1785992735737
     }
    ],
-   "unrealized_positions": 42.3657,
+   "unrealized_positions": 44.82594,
    "trades": 4,
    "new_this_run": 0,
    "summary": {
@@ -89,7 +89,7 @@
  },
  "live": {
   "ok": true,
-  "equity": 781.78337255,
+  "equity": 785.08245255,
   "available": 689.39612431396,
   "position": null,
   "positions": [
@@ -99,12 +99,12 @@
     "vol": 0.0313,
     "contracts": 313.0,
     "entry": 64700.9,
-    "mark": 64377.1,
-    "unrealized": 10.13494,
+    "mark": 64350.3,
+    "unrealized": 10.97378,
     "roi_pct": 2.35,
     "liq": 78389.5,
     "margin": 10.12569085,
-    "margin_ratio": 0.64,
+    "margin_ratio": 0.63,
     "leverage": 200.0,
     "funding_paid": 0.2386,
     "margin_mode": "cross",
@@ -118,12 +118,12 @@
     "vol": 0.0918,
     "contracts": 918.0,
     "entry": 64838.6,
-    "mark": 64377.1,
-    "unrealized": 42.3657,
+    "mark": 64350.299999999996,
+    "unrealized": 44.82594,
     "roi_pct": 0.51,
     "liq": 67990.8,
     "margin": 29.7609174,
-    "margin_ratio": 2.44,
+    "margin_ratio": 2.42,
     "leverage": 200.0,
     "funding_paid": 0.1546,
     "margin_mode": "cross",
@@ -132,7 +132,7 @@
     "account_label": "子帳號"
    }
   ],
-  "unrealized": 52.50064,
+  "unrealized": 55.79972,
   "plan_orders": [],
   "stop_orders": []
  },
@@ -10275,6 +10275,12 @@
    "equity": 781.78337255,
    "main": 441.59632611,
    "sub": 340.18704644
+  },
+  {
+   "ts": "2026-08-06T21:05:01.749930+08:00",
+   "equity": 785.08245255,
+   "main": 442.43516611,
+   "sub": 342.64728644
   }
  ],
  "equity_daily": [
@@ -10284,7 +10290,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 781.78337255
+   "equity": 785.08245255
   }
  ],
  "equity_per_trade": [
@@ -10342,7 +10348,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 21:03:57",
+  "last_tick": "2026-08-06 21:05:01",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -10415,7 +10421,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 21:03:57",
+  "last_tick": "2026-08-06 21:05:01",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-06T12:31:53+08:00"
  }
