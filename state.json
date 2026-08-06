@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 19:27:37",
- "updated_at_iso": "2026-08-06T19:27:37.261080+08:00",
+ "updated_at": "2026-08-06 19:28:41",
+ "updated_at_iso": "2026-08-06T19:28:41.389880+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -60,8 +60,8 @@
      "vol": 0.0918,
      "contracts": 918.0,
      "entry": 64838.6,
-     "mark": 64566.7,
-     "unrealized": 24.96042,
+     "mark": 64566.799999999996,
+     "unrealized": 24.95124,
      "roi_pct": 0.51,
      "liq": 67990.8,
      "margin": 29.7609174,
@@ -72,7 +72,7 @@
      "open_time_ms": 1785992735737
     }
    ],
-   "unrealized_positions": 24.96042,
+   "unrealized_positions": 24.95124,
    "trades": 4,
    "new_this_run": 0,
    "summary": {
@@ -118,8 +118,8 @@
     "vol": 0.0918,
     "contracts": 918.0,
     "entry": 64838.6,
-    "mark": 64566.7,
-    "unrealized": 24.96042,
+    "mark": 64566.799999999996,
+    "unrealized": 24.95124,
     "roi_pct": 0.51,
     "liq": 67990.8,
     "margin": 29.7609174,
@@ -132,7 +132,7 @@
     "account_label": "子帳號"
    }
   ],
-  "unrealized": 29.15775,
+  "unrealized": 29.14857,
   "plan_orders": [],
   "stop_orders": []
  },
@@ -9735,6 +9735,12 @@
    "equity": 758.43130255,
    "main": 435.65871611,
    "sub": 322.77258644
+  },
+  {
+   "ts": "2026-08-06T19:28:41.389880+08:00",
+   "equity": 758.43130255,
+   "main": 435.65871611,
+   "sub": 322.77258644
   }
  ],
  "equity_daily": [
@@ -9802,7 +9808,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 19:27:37",
+  "last_tick": "2026-08-06 19:28:41",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -9875,7 +9881,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 19:27:37",
+  "last_tick": "2026-08-06 19:28:41",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-06T12:31:53+08:00"
  }
