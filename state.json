@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-06 12:32:00",
- "updated_at_iso": "2026-08-06T12:32:00.327682+08:00",
+ "updated_at": "2026-08-06 12:33:04",
+ "updated_at_iso": "2026-08-06T12:33:04.354487+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,9 +8,9 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 431.38675058,
+   "equity": 431.84686058,
    "available": 421.28296973595,
-   "unrealized": -0.02191,
+   "unrealized": 0.4382,
    "position_margin": 10.12569085,
    "positions": [
     {
@@ -19,8 +19,8 @@
      "vol": 0.0313,
      "contracts": 313.0,
      "entry": 64700.9,
-     "mark": 64701.6,
-     "unrealized": -0.02191,
+     "mark": 64686.9,
+     "unrealized": 0.4382,
      "roi_pct": 1.83,
      "liq": 78387.8,
      "margin": 10.12569085,
@@ -31,7 +31,7 @@
      "open_time_ms": 1785942650432
     }
    ],
-   "unrealized_positions": -0.02191,
+   "unrealized_positions": 0.4382,
    "trades": 9,
    "new_this_run": 0,
    "summary": {
@@ -56,7 +56,7 @@
    "positions": [],
    "unrealized_positions": 0,
    "trades": 4,
-   "new_this_run": 1,
+   "new_this_run": 0,
    "summary": {
     "total": 4,
     "win_rate": 0.0,
@@ -71,7 +71,7 @@
  },
  "live": {
   "ok": true,
-  "equity": 729.05345792,
+  "equity": 729.51356792,
   "available": 623.11531848038,
   "position": null,
   "positions": [
@@ -81,8 +81,8 @@
     "vol": 0.0313,
     "contracts": 313.0,
     "entry": 64700.9,
-    "mark": 64701.6,
-    "unrealized": -0.02191,
+    "mark": 64686.9,
+    "unrealized": 0.4382,
     "roi_pct": 1.83,
     "liq": 78387.8,
     "margin": 10.12569085,
@@ -95,7 +95,7 @@
     "account_label": "主帳號"
    }
   ],
-  "unrealized": -0.02191,
+  "unrealized": 0.4382,
   "plan_orders": [],
   "stop_orders": []
  },
@@ -7364,6 +7364,12 @@
    "equity": 729.05345792,
    "main": 431.38675058,
    "sub": 297.66670734
+  },
+  {
+   "ts": "2026-08-06T12:33:04.354487+08:00",
+   "equity": 729.51356792,
+   "main": 431.84686058,
+   "sub": 297.66670734
   }
  ],
  "equity_daily": [
@@ -7373,7 +7379,7 @@
   },
   {
    "date": "2026-08-06",
-   "equity": 729.05345792
+   "equity": 729.51356792
   }
  ],
  "equity_per_trade": [
@@ -7431,7 +7437,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-06 12:32:00",
+  "last_tick": "2026-08-06 12:33:04",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -7504,7 +7510,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-06 12:32:00",
+  "last_tick": "2026-08-06 12:33:04",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-06T12:31:53+08:00"
  }
