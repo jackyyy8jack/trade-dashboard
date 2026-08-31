@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-08-31 21:28:02",
- "updated_at_iso": "2026-08-31T21:28:02.196381+08:00",
+ "updated_at": "2026-08-31 21:32:09",
+ "updated_at_iso": "2026-08-31T21:32:09.743908+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,12 +8,32 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 100.33530176,
-   "available": 100.33530176518,
-   "unrealized": 0.0,
-   "position_margin": 0.0,
-   "positions": [],
-   "unrealized_positions": 0,
+   "equity": 100.17577176,
+   "available": 99.12350306518,
+   "unrealized": -0.15952999,
+   "position_margin": 1.2117987,
+   "positions": [
+    {
+     "position_id": "1485993806",
+     "symbol": "BTC_USDT",
+     "direction": "long",
+     "vol": 0.0031000000000000003,
+     "contracts": 31.0,
+     "entry": 78180.5,
+     "mark": 78129.03870967742,
+     "unrealized": -0.15953,
+     "roi_pct": -13.164727772030124,
+     "funding_roi_pct": 0.0,
+     "liq": 45910.8,
+     "margin": 1.2117987,
+     "margin_ratio": 0.33,
+     "leverage": 200.0,
+     "funding_paid": 0.0,
+     "margin_mode": "cross",
+     "open_time_ms": 1788183076296
+    }
+   ],
+   "unrealized_positions": -0.15953,
    "trades": 35,
    "new_this_run": 0,
    "summary": {
@@ -53,16 +73,38 @@
  },
  "live": {
   "ok": true,
-  "equity": 100.33530176,
-  "available": 100.33530176781001,
+  "equity": 100.17577176,
+  "available": 99.12350306781,
   "position": null,
-  "positions": [],
-  "unrealized": 0,
+  "positions": [
+   {
+    "position_id": "1485993806",
+    "symbol": "BTC_USDT",
+    "direction": "long",
+    "vol": 0.0031000000000000003,
+    "contracts": 31.0,
+    "entry": 78180.5,
+    "mark": 78129.03870967742,
+    "unrealized": -0.15953,
+    "roi_pct": -13.164727772030124,
+    "funding_roi_pct": 0.0,
+    "liq": 45910.8,
+    "margin": 1.2117987,
+    "margin_ratio": 0.33,
+    "leverage": 200.0,
+    "funding_paid": 0.0,
+    "margin_mode": "cross",
+    "open_time_ms": 1788183076296,
+    "account": "main",
+    "account_label": "主帳號"
+   }
+  ],
+  "unrealized": -0.15953,
   "plan_orders": [],
   "stop_orders": []
  },
  "live_stats": {
-  "max_dd_pct": 74.5602613477224
+  "max_dd_pct": 74.60070973862778
  },
  "trade_log": {
   "summary": {
@@ -1039,30 +1081,6 @@
   ]
  },
  "equity_history": [
-  {
-   "ts": "2026-08-29T18:13:49.683664+08:00",
-   "equity": 101.18066789,
-   "main": 101.18066789,
-   "sub": 0.0
-  },
-  {
-   "ts": "2026-08-29T18:14:50.844782+08:00",
-   "equity": 101.18066789,
-   "main": 101.18066789,
-   "sub": 0.0
-  },
-  {
-   "ts": "2026-08-29T18:15:52.091293+08:00",
-   "equity": 101.18066789,
-   "main": 101.18066789,
-   "sub": 0.0
-  },
-  {
-   "ts": "2026-08-29T18:16:53.092087+08:00",
-   "equity": 101.18066789,
-   "main": 101.18066789,
-   "sub": 0.0
-  },
   {
    "ts": "2026-08-29T18:17:54.188281+08:00",
    "equity": 101.18066789,
@@ -19038,6 +19056,30 @@
    "equity": 100.33530176,
    "main": 100.33530176,
    "sub": 0.0
+  },
+  {
+   "ts": "2026-08-31T21:29:06.534182+08:00",
+   "equity": 100.33530176,
+   "main": 100.33530176,
+   "sub": 0.0
+  },
+  {
+   "ts": "2026-08-31T21:30:07.627410+08:00",
+   "equity": 100.33530176,
+   "main": 100.33530176,
+   "sub": 0.0
+  },
+  {
+   "ts": "2026-08-31T21:31:08.703776+08:00",
+   "equity": 100.33530176,
+   "main": 100.33530176,
+   "sub": 0.0
+  },
+  {
+   "ts": "2026-08-31T21:32:09.743908+08:00",
+   "equity": 100.17577176,
+   "main": 100.17577176,
+   "sub": 0.0
   }
  ],
  "equity_daily": [
@@ -19099,7 +19141,7 @@
   },
   {
    "date": "2026-08-31",
-   "equity": 100.33530176
+   "equity": 100.17577176
   }
  ],
  "equity_per_trade": [
@@ -19265,7 +19307,7 @@
   }
  ],
  "log": {
-  "last_tick": "2026-08-31 21:28:02",
+  "last_tick": "2026-08-31 21:32:09",
   "events": [
    {
     "ts": "2026-08-01 11:26:42",
@@ -19473,7 +19515,7 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-08-31 21:28:02",
+  "last_tick": "2026-08-31 21:32:09",
   "last_tick_age_sec": 0,
   "last_trade": "2026-08-31T16:20:12+08:00"
  }
