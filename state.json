@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-11 00:08:24",
- "updated_at_iso": "2026-09-11T00:08:24.452836+08:00",
+ "updated_at": "2026-09-11 00:10:29",
+ "updated_at_iso": "2026-09-11T00:10:29.772231+08:00",
  "log_file": "MEXC 交易紀錄（主帳號 + 子帳號）",
  "mode": "journal",
  "accounts": {
@@ -8,43 +8,23 @@
    "label": "主帳號",
    "ok": true,
    "configured": true,
-   "equity": 96.30404492,
-   "available": 96.17372332189,
-   "unrealized": -0.87475,
-   "position_margin": 1.0050716,
-   "positions": [
-    {
-     "position_id": "1494492866",
-     "symbol": "BTC_USDT",
-     "direction": "long",
-     "vol": 0.0025,
-     "contracts": 25.0,
-     "entry": 77313.2,
-     "mark": 76963.5,
-     "unrealized": -0.87425,
-     "roi_pct": -86.98385269268378,
-     "funding_roi_pct": -1.3599999999999999,
-     "liq": 38534.4,
-     "margin": 1.0050716,
-     "margin_ratio": 0.27999999999999997,
-     "leverage": 200.0,
-     "funding_paid": -0.0137,
-     "margin_mode": "cross",
-     "open_time_ms": 1789050310097
-    }
-   ],
-   "unrealized_positions": -0.87425,
-   "trades": 47,
-   "new_this_run": 0,
+   "equity": 96.19670492,
+   "available": 96.19670492189,
+   "unrealized": 0.0,
+   "position_margin": 0.0,
+   "positions": [],
+   "unrealized_positions": 0,
+   "trades": 48,
+   "new_this_run": 1,
    "summary": {
-    "total": 47,
-    "win_rate": 31.914893617021278,
+    "total": 48,
+    "win_rate": 31.25,
     "avg_win": 4.7875266666666665,
-    "avg_loss": -3.548603125,
+    "avg_loss": -3.4735818181818185,
     "biggest_win": 18.5522,
     "biggest_loss": -24.9537,
-    "net": -41.7424,
-    "fees_funding": 1.2212999999999998
+    "net": -42.81530000000001,
+    "fees_funding": 1.2076
    }
   },
   "sub": {
@@ -73,33 +53,11 @@
  },
  "live": {
   "ok": true,
-  "equity": 96.30404492,
-  "available": 96.17372332452,
+  "equity": 96.19670492,
+  "available": 96.19670492452,
   "position": null,
-  "positions": [
-   {
-    "position_id": "1494492866",
-    "symbol": "BTC_USDT",
-    "direction": "long",
-    "vol": 0.0025,
-    "contracts": 25.0,
-    "entry": 77313.2,
-    "mark": 76963.5,
-    "unrealized": -0.87425,
-    "roi_pct": -86.98385269268378,
-    "funding_roi_pct": -1.3599999999999999,
-    "liq": 38534.4,
-    "margin": 1.0050716,
-    "margin_ratio": 0.27999999999999997,
-    "leverage": 200.0,
-    "funding_paid": -0.0137,
-    "margin_mode": "cross",
-    "open_time_ms": 1789050310097,
-    "account": "main",
-    "account_label": "主帳號"
-   }
-  ],
-  "unrealized": -0.87425,
+  "positions": [],
+  "unrealized": 0,
   "plan_orders": [],
   "stop_orders": []
  },
@@ -108,14 +66,14 @@
  },
  "trade_log": {
   "summary": {
-   "total": 52,
-   "win_rate": 28.846153846153843,
+   "total": 53,
+   "win_rate": 28.30188679245283,
    "avg_win": 4.7875266666666665,
-   "avg_loss": -5.590475675675676,
+   "avg_loss": -5.471592105263158,
    "biggest_win": 18.5522,
    "biggest_loss": -27.1929,
-   "net": -135.03470000000002,
-   "fees_funding": 2.0385999999999997
+   "net": -136.10760000000002,
+   "fees_funding": 2.0249
   },
   "trades": [
    {
@@ -1365,22 +1323,34 @@
     "account": "main",
     "account_label": "主帳號",
     "time": "2026-09-09T23:01:36+08:00"
+   },
+   {
+    "id": "1494492866",
+    "symbol": "BTC_USDT",
+    "direction": "long",
+    "entry": 77313.2,
+    "exit": 76920.3,
+    "vol": 0.0025,
+    "contracts": 25.0,
+    "notional": 193.283,
+    "profit": -1.0729,
+    "gross": -0.982,
+    "profit_pct": -99.07000000000001,
+    "pct_basis": "margin",
+    "margin": 0.9664149999999999,
+    "funding": -0.0137,
+    "fee": 0.0771,
+    "leverage": 200.0,
+    "margin_mode": "cross",
+    "open_time_ms": 1789050310000,
+    "time_ms": 1789056573000,
+    "account": "main",
+    "account_label": "主帳號",
+    "time": "2026-09-11T00:09:33+08:00"
    }
   ]
  },
  "equity_history": [
-  {
-   "ts": "2026-09-08T20:55:19.578625+08:00",
-   "equity": 94.36554588,
-   "main": 94.36554588,
-   "sub": 0.0
-  },
-  {
-   "ts": "2026-09-08T20:56:20.687945+08:00",
-   "equity": 94.36554588,
-   "main": 94.36554588,
-   "sub": 0.0
-  },
   {
    "ts": "2026-09-08T20:57:22.003239+08:00",
    "equity": 94.36554588,
@@ -19368,6 +19338,18 @@
    "equity": 96.30404492,
    "main": 96.30404492,
    "sub": 0.0
+  },
+  {
+   "ts": "2026-09-11T00:09:28.700867+08:00",
+   "equity": 96.21329492,
+   "main": 96.21329492,
+   "sub": 0.0
+  },
+  {
+   "ts": "2026-09-11T00:10:29.772231+08:00",
+   "equity": 96.19670492,
+   "main": 96.19670492,
+   "sub": 0.0
   }
  ],
  "equity_daily": [
@@ -19433,7 +19415,7 @@
   },
   {
    "date": "2026-09-11",
-   "equity": 96.30404492
+   "equity": 96.19670492
   }
  ],
  "equity_per_trade": [
@@ -19644,16 +19626,15 @@
   {
    "ts": "2026-09-09T23:01:36+08:00",
    "equity": -135.0347
+  },
+  {
+   "ts": "2026-09-11T00:09:33+08:00",
+   "equity": -136.1076
   }
  ],
  "log": {
-  "last_tick": "2026-09-11 00:08:24",
+  "last_tick": "2026-09-11 00:10:29",
   "events": [
-   {
-    "ts": "2026-08-06 12:31:53",
-    "kind": "TRADE",
-    "msg": "[EXIT] 子帳號 BTC_USDT SHORT 64649.8000→64700.0000 -15.5620 USDT (-15.52%)"
-   },
    {
     "ts": "2026-08-07 16:45:48",
     "kind": "TRADE",
@@ -19848,6 +19829,11 @@
     "ts": "2026-09-09 23:01:36",
     "kind": "TRADE",
     "msg": "[CLOSE] 主帳號 BTC_USDT LONG 78357.9000→78794.5000 +2.8269 USDT (+95.04%)"
+   },
+   {
+    "ts": "2026-09-11 00:09:33",
+    "kind": "TRADE",
+    "msg": "[EXIT] 主帳號 BTC_USDT LONG 77313.2000→76920.3000 -1.0729 USDT (-99.07%)"
    }
   ],
   "errors": [],
@@ -19855,8 +19841,8 @@
  },
  "status": {
   "online": true,
-  "last_tick": "2026-09-11 00:08:24",
+  "last_tick": "2026-09-11 00:10:29",
   "last_tick_age_sec": 0,
-  "last_trade": "2026-09-09T23:01:36+08:00"
+  "last_trade": "2026-09-11T00:09:33+08:00"
  }
 }
